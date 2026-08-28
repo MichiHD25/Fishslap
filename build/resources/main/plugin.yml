@@ -1,0 +1,10 @@
+name: Fishslap
+version: 1.0.0
+main: me.northcraft.fishslap.Fishslap
+api-version: '1.20'
+
+commands:
+  fishslap:
+    description: Hauptbefehl fuer das Fishslap-Plugin
+    permission: fishslap.admin
+    usage: /fishslap <setlobby|setspawn1|setspawn2>
