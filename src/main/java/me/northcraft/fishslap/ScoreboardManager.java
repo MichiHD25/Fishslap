@@ -11,7 +11,7 @@ public class ScoreboardManager {
 
     // Setzt den NORTHCRAFT.ME-Header in der Tab-Liste
     public static void updateTablist(Player player) {
-        player.setPlayerListHeader("\n§b§lNORTH§f§lCRAFT§c§l.ME\n");
+        player.setPlayerListHeader("\n§b§lNORTH§f§lCRAFT§4§l.ME\n");
     }
 
     // 1. Design für die Wartelobby
@@ -23,7 +23,7 @@ public class ScoreboardManager {
 
         Scoreboard board = manager.getNewScoreboard();
 
-        Objective obj = board.registerNewObjective("lobby", Criteria.DUMMY, "§b§lNORTH§f§lCRAFT§c§l.ME");
+        Objective obj = board.registerNewObjective("lobby", Criteria.DUMMY, "§b§lNORTH§f§lCRAFT§4§l.ME");
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 
         setScore(obj, "§1", 15);
@@ -49,7 +49,7 @@ public class ScoreboardManager {
 
         Scoreboard board = manager.getNewScoreboard();
 
-        Objective obj = board.registerNewObjective("fishslap", Criteria.DUMMY, "§b§lNORTH§f§lCRAFT§c§l.ME");
+        Objective obj = board.registerNewObjective("fishslap", Criteria.DUMMY, "§b§lNORTH§f§lCRAFT§4§l.ME");
         obj.setDisplaySlot(DisplaySlot.SIDEBAR);
 
         setScore(obj, "§1", 15);

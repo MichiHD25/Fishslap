@@ -222,7 +222,7 @@ public class GameManager {
             if (plugin.getLoc("lobby") != null) {
                 p.teleport(plugin.getLoc("lobby"));
             }
-            p.getInventory().clear();
+            giveLobbyItems(p);
             ScoreboardManager.setLobbyScoreboard(p, 0);
         }
 
@@ -241,6 +241,19 @@ public class GameManager {
         if (player2 != null && player2.isOnline()) {
             ScoreboardManager.setGameScoreboard(player2, "§9BLAU", killsP2, killsP1);
         }
+    }
+
+    public void giveLobbyItems(Player player) {
+        player.getInventory().clear();
+
+        ItemStack lobbyBed = new ItemStack(Material.RED_BED);
+        ItemMeta meta = lobbyBed.getItemMeta();
+        if (meta != null) {
+            meta.setDisplayName("§c§lZurück zur Lobby §7(Rechtsklick)");
+            lobbyBed.setItemMeta(meta);
+        }
+
+        player.getInventory().setItem(8, lobbyBed);
     }
 
     private void giveFishKit(Player player) {

@@ -10,6 +10,8 @@ public final class Fishslap extends JavaPlugin {
     @Override
     public void onEnable() {
         saveDefaultConfig();
+
+        // Registriert den Messaging-Channel für den Server-Wechsel via BungeeCord/Velocity
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 
         this.gameManager = new GameManager(this);
